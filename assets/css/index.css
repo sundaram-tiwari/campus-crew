@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F5F5F5;
 }
 
 body {
@@ -20,8 +19,8 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 6px 0; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* optional for visual separation */
+    padding: 6px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-content {
@@ -32,7 +31,6 @@ body {
 }
 
 .nav-list {
-    background: transparent;
     display: flex;
     width: 70%;
     justify-content: space-evenly;
@@ -46,7 +44,6 @@ body {
 }
 
 .nav-list li {
-    background: transparent;
     list-style-type: none;
     font-size: 18px;
     padding: 5px;
@@ -62,7 +59,6 @@ body {
 .auth-btn {
     width: 15%;
     display: flex;
-    background: transparent;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -85,9 +81,9 @@ body {
     font-size: 16px;
 }
 
-/* Hero Section */
 .hero-section {
-    padding: 40px 0;
+    padding: 30px 0;
+    margin-top: 80px;
 }
 
 .hero-container {
@@ -108,33 +104,29 @@ body {
 
 .hero-info h1 {
     font-size: 40px;
-    text-align: left;
     color: #002aff;
 }
 
 .hero-info h3 {
     font-size: 26px;
     margin-top: 20px;
-    text-align: left;
     color: #333;
 }
 
 .hero-info h6 {
     font-size: 18px;
     margin-top: 10px;
-    text-align: left;
     color: #555;
 }
 
-.hero-img, .hero-img2 {
+.hero-img {
     width: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.hero-img img,
-.hero-img2 img {
+.hero-img img {
     width: 100%;
     max-width: 500px;
     border-radius: 10px;
@@ -142,15 +134,16 @@ body {
     transition: all 0.3s ease-in;
 }
 
-.hero-img img:hover{
+.hero-img img:hover {
     max-width: 550px;
 }
+
 .features-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
-    margin: 40px auto;
+    margin: 20px auto;
     gap: 30px;
 }
 
@@ -171,25 +164,108 @@ body {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
 .features-box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .features-box h3 {
     margin-top: 10px;
     font-size: 20px;
     color: #002aff;
-    background-color: #e8e9eb;
 }
 
 .features-box h6 {
-    background-color: #e8e9eb;
     margin-top: 8px;
     font-size: 15px;
     color: #555;
+}
+
+.features-icon {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    background: transparent;
+}
+.footer {
+    background-color: #e8e9eb;
+    color: #222;
+    padding: 40px 20px 20px;
+    margin-top: 100px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    max-width: 250px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #000;
+}
+
+.footer-contact p {
+    color: #444;
+}
+
+.footer-social .social-icons a {
+    color: #555;
+    margin-right: 12px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+    color: #000;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #666;
 }
 
 
@@ -197,11 +273,10 @@ body {
 @media screen and (max-width: 768px) {
     .hero-container {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
-    .hero-info, .hero-img, .hero-img2 {
+    .hero-info, .hero-img {
         width: 90%;
     }
 
