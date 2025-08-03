@@ -22,8 +22,8 @@
             </ul>
         </div>
         <div class="auth-btn">
-            <button class="login-btn">Log In</button>
-            <button class="signup-btn">Sign Up</button>
+            <a href="auth/login.php" class="login-btn">Log In</a>
+            <a href="auth/register.php" class="signup-btn">Sign Up</a>
         </div>
     </nav>
 

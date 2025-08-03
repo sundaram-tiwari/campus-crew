@@ -63,19 +63,22 @@ body {
     justify-content: space-evenly;
 }
 
-.auth-btn button {
+.auth-btn a {
     width: 80px;
     font-size: 15px;
     height: 30px;
+    text-decoration: none;
     border: 0.1px solid #002aff;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
     background-color: #002aff;
     color: white;
     transition: all 0.3s ease-in;
+    padding-top: 2px;
 }
 
-.auth-btn button:hover {
+.auth-btn a:hover {
     height: 32px;
     width: 85px;
     font-size: 16px;
@@ -268,8 +271,6 @@ body {
     color: #666;
 }
 
-
-/* Responsive */
 @media screen and (max-width: 768px) {
     .hero-container {
         flex-direction: column;
