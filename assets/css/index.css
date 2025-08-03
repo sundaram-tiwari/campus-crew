@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F5F5F5;
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #e8e9eb;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6px 0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* optional for visual separation */
+}
+
+.nav-content {
+    background-color: transparent;
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    background: transparent;
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    padding: 5px;
+    background: transparent;
+}
+
+.nav-list li {
+    background: transparent;
+    list-style-type: none;
+    font-size: 18px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: font-size 0.3s ease-in;
+}
+
+.nav-list li:hover {
+    font-size: 22px;
+}
+
+.auth-btn {
+    width: 15%;
+    display: flex;
+    background: transparent;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.auth-btn button {
+    width: 80px;
+    font-size: 15px;
+    height: 30px;
+    border: 0.1px solid #002aff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #002aff;
+    color: white;
+    transition: all 0.3s ease-in;
+}
+
+.auth-btn button:hover {
+    height: 32px;
+    width: 85px;
+    font-size: 16px;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 40px 0;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 60px auto;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.hero-info {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-info h1 {
+    font-size: 40px;
+    text-align: left;
+    color: #002aff;
+}
+
+.hero-info h3 {
+    font-size: 26px;
+    margin-top: 20px;
+    text-align: left;
+    color: #333;
+}
+
+.hero-info h6 {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: left;
+    color: #555;
+}
+
+.hero-img, .hero-img2 {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-img img,
+.hero-img2 img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in;
+}
+
+.hero-img img:hover{
+    max-width: 550px;
+}
+.features-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 40px auto;
+    gap: 30px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.features-box {
+    width: 30%;
+    min-width: 250px;
+    background-color: #e8e9eb;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.features-box:hover {
+    transform: translateY(-5px);
+}
+
+.features-box h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #002aff;
+    background-color: #e8e9eb;
+}
+
+.features-box h6 {
+    background-color: #e8e9eb;
+    margin-top: 8px;
+    font-size: 15px;
+    color: #555;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-info, .hero-img, .hero-img2 {
+        width: 90%;
+    }
+
+    .hero-info h1 {
+        font-size: 28px;
+    }
+
+    .hero-info h3 {
+        font-size: 20px;
+    }
+
+    .hero-info h6 {
+        font-size: 16px;
+    }
+
+    .auth-btn {
+        width: 30%;
+    }
+}
