@@ -28,7 +28,6 @@
     </nav>
 
     <main class="hero-section">
-        <!-- Hero 1 -->
         <div class="hero-container">
             <div class="hero-info">
                 <h1>Unite. Create. Celebrate.</h1>
@@ -41,7 +40,6 @@
             </div>
         </div>
 
-        <!-- Hero 2 -->
         <div class="hero-container">
             <div class="hero-img">
                 <img src="./assets/images/hero-img2.webp" alt="Organize Events Easily" />
@@ -54,7 +52,6 @@
             </div>
         </div>
 
-        <!-- Hero 3 -->
         <div class="hero-container">
             <div class="hero-info">
                 <h1>Discover & Join Events That Matter</h1>
@@ -147,7 +144,5 @@
             <p>&copy; 2025 Campus Crew. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
-
 </html>
