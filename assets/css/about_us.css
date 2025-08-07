@@ -1,0 +1,77 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.header {
+  background-color: #343a40;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.mission,
+.features,
+.team {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.mission h2,
+.features h2,
+.team h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features li {
+  padding: 10px 0;
+  font-size: 1.1rem;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.member {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 250px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.member img {
+  width: 140px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.footer {
+  background-color: #343a40;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}

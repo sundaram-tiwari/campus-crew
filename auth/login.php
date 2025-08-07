@@ -14,7 +14,7 @@
             <img src="../assets/images/logo.png" class="login-logo" alt="Campus Crew" />
             <h2>Welcome Back!</h2>
             <p>Login to continue exploring campus events</p>
-            <form>
+            <form action="login.php" method="post">
                 <input type="email" class="input-box" placeholder="Email" required />
                 <input type="password" class="input-box" placeholder="Password" required />
                 <button type="submit">Login</button>
@@ -27,3 +27,20 @@
 </body>
 
 </html>
+<?php
+include("../config/db.php");
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $email = trim(mysqli_real_escape_string($conn, $_POST("email")));
+    $password = trim($_POST['password']);
+
+    if(empty($email) || empty($password)){
+        die('Please provdie all fields');
+    }
+
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        die('Invalid email');
+    }
+}
+    
+?>

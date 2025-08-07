@@ -11,21 +11,9 @@
 </head>
 
 <body>
-    <nav class="nav-container">
-        <div class="nav-content">
-            <img src="./assets/images/logo.png" class="logo" alt="CampusCrew" />
-            <ul class="nav-list">
-                <li>Home</li>
-                <li>Events</li>
-                <li>About Us</li>
-                <li>Contact Us</li>
-            </ul>
-        </div>
-        <div class="auth-btn">
-            <a href="auth/login.php" class="login-btn">Log In</a>
-            <a href="auth/register.php" class="signup-btn">Sign Up</a>
-        </div>
-    </nav>
+   <?php 
+    include 'includes/navbar.php';
+   ?>
 
     <main class="hero-section">
         <div class="hero-container">

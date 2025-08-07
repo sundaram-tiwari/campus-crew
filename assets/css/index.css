@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -52,6 +53,11 @@ body {
     transition: font-size 0.3s ease-in;
 }
 
+.nav-list li a {
+    text-decoration: none;
+    color: #000;
+}
+
 .nav-list li:hover {
     font-size: 22px;
 }
@@ -83,6 +89,7 @@ body {
     width: 85px;
     font-size: 16px;
 }
+
 
 .hero-section {
     padding: 30px 0;
