@@ -15,8 +15,8 @@
             <h2>Welcome Back!</h2>
             <p>Login to continue exploring campus events</p>
             <form action="login.php" method="post">
-                <input type="email" class="input-box" placeholder="Email" required />
-                <input type="password" class="input-box" placeholder="Password" required />
+                <input type="email" class="input-box" name="email" placeholder="Email" required />
+                <input type="password" class="input-box" name="password" placeholder="Password" required />
                 <button type="submit">Login</button>
             </form>
             <div class="login-footer">
@@ -28,10 +28,14 @@
 
 </html>
 <?php
+session_start();
+
 include("../config/db.php");
 
+$base_url = '/campus_crew';
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $email = trim(mysqli_real_escape_string($conn, $_POST("email")));
+    $email = trim(mysqli_real_escape_string($conn, $_POST["email"]));
     $password = trim($_POST['password']);
 
     if(empty($email) || empty($password)){
@@ -40,6 +44,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         die('Invalid email');
+    }
+
+    $sql = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
+    $result = mysqli_query($conn, $sql);
+
+    if(mysqli_affected_rows($conn) === 1){
+        $users = mysqli_fetch_assoc($result);
+
+        if(password_verify($password, $users["password"])){
+            $_SESSION["user_id"] = $users["id"];
+            $_SESSION["fullName"] = $users["fullName"];
+            $_SESSION["email"] = $users["email"];
+            
+            header("Location: $base_url/index.php");
+            exit();
+        } else{
+            echo "<script>alert('Invalid password.');</script>";
+        }
+    } else {
+        echo "<script>alert('User Not Found.');</script>";
     }
 }
     
