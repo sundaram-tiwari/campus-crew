@@ -1,4 +1,8 @@
-  <!DOCTYPE html>
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,41 +14,74 @@
 
 <body>
   <div class="register-container">
-    <div class="register-box">
-      <img src="../assets/images/logo.png" class="register-logo" alt="Campus Crew" />
-      <h2>Register</h2>
-      <form action="register.php" method="post">
-        <input type="text" placeholder="Full Name" name="fullName" required />
-        <input type="email" placeholder="Email" name="email" required />
-        <input type="tel" placeholder="Phone" name="phone" required />
-        <select name="course" required>
-          <option value="" disabled selected>Select Course</option>
-          <option>B.Com</option>
-          <option>BCA</option>
-          <option>BBA</option>
-          <option>BA</option>
-          <option>Other</option>
-        </select>
-        <select name="year" required>
-          <option value="" disabled selected>Select Year</option>
-          <option value="1">1st Year</option>
-          <option value="2">2nd Year</option>
-          <option value="3">3rd Year</option>
-          <option value="4">4th Year</option>
-        </select>
-        <input type="password" placeholder="Password" name="password" required />
-        <input type="password" placeholder="Confirm Password" name="cnfPass" required />
-        <button type="submit">Sign Up</button>
-      </form>
-      <div class="register-footer">
-        <p>Already have an account? <a href="login.php">Log In</a></p>
+    <img src="../assets/images/logo.png" alt="Campus Crew" class="register-logo">
+    <h1>Register</h1>
+
+    <form action="register.php" method="post" class="input-form" enctype="multipart/form-data">
+      <div class="field-box">
+        <label for="fullName">Full Name</label>
+        <input type="text" placeholder="Enter your full name" name="fullName" required />
       </div>
-    </div>
+
+      <div class="field-box">
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter your email" name="email" required />
+      </div>
+
+      <div class="field-box">
+        <label for="phone">Phone</label>
+        <input type="tel" placeholder="Enter your 10-digit phone number" name="phone" required />
+      </div>
+      <div class="single-row">
+        <div class="field-box">
+          <label for="course">Course</label>
+          <select name="course" required>
+            <option value="" disabled selected>Select Course</option>
+            <option>B.Com</option>
+            <option>BCA</option>
+            <option>BBA</option>
+            <option>BA</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field-box">
+          <label for="year">Year</label>
+          <select name="year" required>
+            <option value="" disabled selected>Select Year</option>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+          </select>
+        </div>
+      </div>
+      <!-- <div class="field-box">
+        <label for="profile_photo">Profile Photo</label>
+        <input type="file" name="profile_photo" accept="image/*" required />
+      </div> -->
+
+      <div class="field-box">
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter your password" name="password" required />
+      </div>
+
+      <div class="field-box">
+        <label for="cnfPass">Confirm Password</label>
+        <input type="password" placeholder="Confirm password" name="cnfPass" required />
+      </div>
+
+      <button type="submit" class="btn-submit">Register</button>
+    </form>
+
+    <p class="login-text">Already have an account? <a href="login.php">Login</a></p>
   </div>
 </body>
+
 </html>
 
 <?php
+
 include("../config/db.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -94,5 +131,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   }
   mysqli_close($conn);
 } 
-
 ?>

@@ -4,13 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us - Campus Crew</title>
-  <link rel="stylesheet" href="../assets/css/about_us.css" />
-  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/about_us.css" />
 </head>
 <body>
 
     <?php 
-    include '../includes/navbar.php' 
+    include 'includes/navbar.php' 
     ?>
   <header class="header">
     <h1>About Campus Crew</h1>

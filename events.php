@@ -4,13 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Campus Crew - Events</title>
-  <link rel="stylesheet" href="../assets/css/events.css"/>
-  <link rel="stylesheet" href="../assets/css/index.css"/>
+  <link rel="stylesheet" href="assets/css/events.css"/>
 </head>
 <body>
 
 <?php
-    include '../includes/navbar.php';
+    include 'includes/navbar.php';
 ?>
   <div class="events-container">
 

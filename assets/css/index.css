@@ -62,14 +62,14 @@ body {
     font-size: 22px;
 }
 
-.auth-btn {
+.auth-btns {
     width: 15%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.auth-btn a {
+.auth-btn {
     width: 80px;
     font-size: 15px;
     height: 30px;
@@ -84,12 +84,45 @@ body {
     padding-top: 2px;
 }
 
-.auth-btn a:hover {
+.auth-btn:hover {
     height: 32px;
     width: 85px;
     font-size: 16px;
 }
 
+.logout-btn{
+     width: 80px;
+    font-size: 15px;
+    height: 30px;
+    text-decoration: none;
+    border: 0.1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    background-color: red;
+    color: white;
+    transition: all 0.3s ease-in;
+    padding-top: 2px;
+}
+
+.user-btn{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: #ffff;
+    border-radius: 100%;
+    padding: 8px;
+    justify-self: left;
+    transition: all 0.3s ease-in;
+}
+
+.user-btn i{
+    font-size: 20px;
+}
+
+.user-btn:hover{
+    transform: translateY(-5px);
+}
 
 .hero-section {
     padding: 30px 0;

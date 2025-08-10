@@ -1,5 +1,4 @@
-<!-- contact.php -->
-<?php include '../includes/navbar.php'; ?>
+<?php include 'includes/navbar.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,8 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - Campus Crew</title>
-  <link rel="stylesheet" href="../assets/css/contact_us.css" />
-  <link rel="stylesheet" href="../assets/css/index.css" />
+  <link rel="stylesheet" href="assets/css/contact_us.css" />
 </head>
 <body>
 

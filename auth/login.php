@@ -20,7 +20,7 @@
                 <button type="submit">Login</button>
             </form>
             <div class="login-footer">
-                <p>Don't have an account? <a href="register.php">Sign up</a></p>
+                <p>Don't have an account? <a href="register.php">Register</a></p>
             </div>
         </div>
     </div>
@@ -33,6 +33,11 @@ session_start();
 include("../config/db.php");
 
 $base_url = '/campus_crew';
+
+if(isset($_SESSION['user_id'])){
+    header("Location: $base_url/index.php");
+    exit();
+}
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $email = trim(mysqli_real_escape_string($conn, $_POST["email"]));
