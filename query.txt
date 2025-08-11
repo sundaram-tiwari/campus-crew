@@ -1,0 +1,6 @@
+User table :-
+
+
+events table:-
+    insert :- INSERT INTO `events` (`event_id`, `title`, `description`, `event_date`, `event_time`, `image_url`, `category`, `target_course`, `target_year`, `created_at`) VALUES (NULL, 'Hackathon 2025', 'A 24-hour coding marathon for developers and tech enthusiasts.', '2025-08-12', '11:44:27', 'assets/images/events/event1.jpg', 'tech', 'Open For All', 'Open For All', current_timestamp());
+    

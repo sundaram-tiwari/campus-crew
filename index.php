@@ -106,10 +106,10 @@
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="events.php">Events</a></li>
+                    <li><a href="about_us.php">About Us</a></li>
+                    <li><a href="contact_us.php">Contact</a></li>
                 </ul>
             </div>
 
