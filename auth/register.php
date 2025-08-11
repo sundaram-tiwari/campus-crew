@@ -56,10 +56,6 @@ session_start();
           </select>
         </div>
       </div>
-      <!-- <div class="field-box">
-        <label for="profile_photo">Profile Photo</label>
-        <input type="file" name="profile_photo" accept="image/*" required />
-      </div> -->
 
       <div class="field-box">
         <label for="password">Password</label>

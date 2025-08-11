@@ -16,7 +16,7 @@ session_start();
     </div>
     <div class="auth-btns">
         <?php if (isset($_SESSION['user_id'])): ?>
-            <a href="auth/profile.php">
+            <a href="auth/user_profile.php">
                 My Profile</a> |
             <a href="auth/logout.php" class="logout-btn">Log Out</a>
         <?php else: ?>
