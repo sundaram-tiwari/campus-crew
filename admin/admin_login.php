@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
-    <link rel="stylesheet" href="../assets/admin/css/admin_login.css">
+    <link rel="stylesheet" href="assets/css/admin_login.css">
 </head>
 
 <body>
@@ -27,5 +27,5 @@
         <a href="" class="forget-pass">Forget Password ?</a>
     </div>
 </body>
-
 </html>
+
