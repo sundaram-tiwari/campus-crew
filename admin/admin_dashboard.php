@@ -1,3 +1,13 @@
+<?php
+session_start();
+include "config/db_connect.php";
+
+ $sql = "SELECT * FROM events";
+  $result = mysqli_query($conn, $sql);
+
+  $events = mysqli_fetch_all($result);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +19,14 @@
 </head>
 
 <body>
+  <?php $page_id = "dashboard"; ?>
   <?php include 'includes/admin_sidebar.php'; ?>
 
   <main class="main-content">
     <header class="topbar">
       <h1>Dashboard</h1>
       <div class="admin-info">
-        <span>Welcome, Admin</span>
+        <span><?php echo "Welcome, " . $_SESSION['name'];?></span>
         <img src="assets/images/admin-avtar.png" alt="Admin" class="avatar">
       </div>
     </header>
@@ -23,7 +34,7 @@
     <section class="dashboard-cards">
       <div class="card">
         <i class="fas fa-calendar-alt"></i>
-        <h3>25</h3>
+        <h3><?php echo mysqli_num_rows($result); ?></h3>
         <p>Upcoming Events</p>
       </div>
       <div class="card">
@@ -70,3 +81,12 @@
 </body>
 
 </html>
+
+<?php
+
+  if(!isset($_SESSION['admin_id'])){
+    header("Location: admin_login.php");
+    exit();
+  }
+
+?>
