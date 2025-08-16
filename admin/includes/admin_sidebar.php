@@ -10,6 +10,6 @@
         <li class="<?php if(isset($page_id) && $page_id == 'events') echo 'sidebar-active';?>"><a href="manage_events.php"><i class="fas fa-calendar-alt"></i> Manage Events</a></li>
         <li class="<?php if(isset($page_id) && $page_id == 'users') echo 'sidebar-active';?>"><a href="users.php"><i class="fas fa-users"></i> Users</a></li>
         <li class="<?php if(isset($page_id) && $page_id == 'registrations') echo 'sidebar-active';?>"><a href="registrations.php"><i class="fas fa-clipboard-list"></i> Registrations</a></li>
-        <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        <li><a href="admin_logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
     </ul>
 </aside>

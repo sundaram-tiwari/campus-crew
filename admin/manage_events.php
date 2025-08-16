@@ -1,20 +1,30 @@
 <?php
-session_start();
 include "config/db_connect.php";
 include "../config/constant.php";
+include "includes/admin_login_check.php";
 
-if (!isset($_SESSION['admin_id'])) {
-    header("Location: admin_login.php");
-    exit();
-}
+$search = "";
+$where = "";
 
 $start = 0;
 $page = 1;
 
 $srno = 1;
-$records = mysqli_query($conn, "SELECT * FROM events");
+
+if(isset($_GET['search']) && !empty($_GET['search'])) {
+    $search = mysqli_real_escape_string($conn, $_GET['search']);
+    $where = "WHERE title LIKE '%$search%'
+            OR description LIKE '%$search'
+            OR category LIKE '%$search'
+            OR target_course LIKE '%$search'
+            OR target_year LIKE '%$search'";
+}
+
+$records = mysqli_query($conn, "SELECT * FROM events $where ORDER BY event_date DESC");
 $num_of_rows = $records->num_rows;
+
 $pages = ceil($num_of_rows / PAGINATION_LIMIT);
+
 if (isset($_GET['page-no']) && is_numeric($_GET['page-no'])) {
     $page = max(1, min($pages, intval($_GET['page-no'])));
     $start = ($page - 1) * PAGINATION_LIMIT;
@@ -23,9 +33,11 @@ if (isset($_GET['page-no']) && is_numeric($_GET['page-no'])) {
 
 $limit = PAGINATION_LIMIT;
 
-$sql = "SELECT * FROM events LIMIT $start, $limit";
+$sql = "SELECT * FROM events $where ORDER BY event_date DESC LIMIT $start, $limit";
 $result = mysqli_query($conn, $sql);
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +50,9 @@ $result = mysqli_query($conn, $sql);
 </head>
 
 <body>
-      <?php $page_id = "events"; ?>
+
+
+    <?php $page_id = "events"; ?>
     <?php include "includes/admin_sidebar.php"; ?>
     <main class="main-content">
         <header class="topbar">
@@ -48,10 +62,12 @@ $result = mysqli_query($conn, $sql);
 
         <section class="event-section">
             <div class="search-box">
-                <input type="text" placeholder="Search events..." id="searchInput">
-                <button>Search</button>
+                <form method="GET" action="">
+                    <input type="text" name="search" placeholder="Search events..."
+                        value="<?php echo htmlspecialchars($search); ?>">
+                    <button type="submit">Search</button>
+                </form>
             </div>
-
             <div class="table-container">
                 <table>
                     <thead>
@@ -95,10 +111,10 @@ $result = mysqli_query($conn, $sql);
                                 <td>
                                     <?php echo $row["target_year"]; ?>
                                 </td>
-                                <td> <a href="edit_event.php?id=101" class="btn-edit">
+                                <td> <a href="edit_event.php?id=<?php echo $row['event_id']; ?>" class="btn-edit">
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </a>
-                                    <a href="delete_event.php?id=101" class="btn-delete"
+                                    <a href="delete_event.php?id=<?php echo $row['event_id']; ?>" class="btn-delete"
                                         onclick="return confirm('Delete this event?')">
                                         <i class="fa-solid fa-trash"></i></a>
                                 </td>
@@ -127,7 +143,7 @@ $result = mysqli_query($conn, $sql);
                     <a href="#" class="page-link disabled">Next</a>
                 <?php endif; ?>
             </div>
-        </section> 
+        </section>
     </main>
 </body>
 

@@ -35,20 +35,21 @@ body{
   padding: 20px 30px;
 }
 
-.search-box {
+.search-box form{
   margin-bottom: 15px;
   display: flex;
   gap: 10px;
+  margin-top: 50px
 }
 
-.search-box input {
+.search-box form input {
   flex: 1;
   padding: 8px 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
 }
 
-.search-box button {
+.search-box form button {
   background: #3b82f6;
   color: white;
   border: none;
