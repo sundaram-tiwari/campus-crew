@@ -16,19 +16,19 @@
     <h1 class="page-title">Browse Events</h1>
 
     <div class="filters">
-      <select id="categoryFilter">
-        <option value="all">All Categories</option>
-        <option value="tech">Tech</option>
-        <option value="cultural">Cultural</option>
-        <option value="sports">Sports</option>
+      <select id="courseFilter">
+        <option name="target_course" value="all">All Events</option>
+        <option value="BCA">BCA</option>
+        <option value="BBA">BBA</option>
+        <option value="BCOM">BCOM</option>
+        <option value="Open for All">Open for All</option>
       </select>
 
       <input type="date" id="dateFilter" />
 
-      <input type="text" id="searchFilter" placeholder="Search by title..." />
+      <input type="text" id="searchFilter" placeholder="Search by title or category" />
     </div>
 
-    <!-- Events Grid -->
     <div class="events-grid" id="eventsGrid">
   
     </div>

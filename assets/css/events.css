@@ -54,6 +54,10 @@ body {
   gap: 24px;
 }
 
+.event-link{
+  text-decoration: none;
+}
+
 .event-card {
   background-color: #fff;
   border-radius: 10px;
@@ -108,4 +112,60 @@ body {
   .events-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+.event-detail-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.wrap-content{
+  display: flex;
+  justify-content: left;
+  gap: 80px;
+}
+
+.wrap-content2{
+  display: flex;
+  justify-content: left;
+  gap: 117px;
+}
+
+.event-detail-container p {
+  padding: 3px 0px;
+}
+
+.event-detail-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.event-detail-container h1{
+  padding: 5px 0px 10px 0px ;
+  align-self: center;
+}
+.event-action {
+  margin-top: 20px;
+  align-self: center;
+}
+.btn {
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+}
+.btn-secondary {
+  background: #6c757d;
+  color: #fff;
 }
