@@ -168,4 +168,21 @@ body {
 .btn-secondary {
   background: #6c757d;
   color: #fff;
+  margin-bottom: 10px;
+}
+
+.btn-danger{
+  background-color: #f53b3b;
+  color: #fff;
+  cursor: pointer;
+  border: o.5px solid #ffff;
+  transition: all 0.3s ease-in;
+}
+
+.btn-danger:hover{
+  background-color: #ff0000;
+}
+.registered-msg{
+  text-align: center;
+  margin-bottom: 10px;
 }

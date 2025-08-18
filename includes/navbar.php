@@ -1,6 +1,6 @@
 <?php
-$base_url = '/campus_crew';
-session_start();
+$base_url = '/campus_crew'; 
+// session_start();
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 <link rel="stylesheet" href="./assets/css/index.css">
@@ -16,12 +16,12 @@ session_start();
     </div>
     <div class="auth-btns">
         <?php if (isset($_SESSION['user_id'])): ?>
-            <a href="auth/user_profile.php">
+            <a href="<?= $base_url ?>/auth/user_profile.php">
                 My Profile</a> |
-            <a href="auth/logout.php" class="logout-btn">Log Out</a>
+            <a href="<?= $base_url ?>/auth/logout.php" class="logout-btn">Log Out</a>
         <?php else: ?>
-            <a href="auth/login.php" class="auth-btn">Log In</a>
-            <a href="auth/register.php" class="auth-btn">Register</a>
+            <a href="<?= $base_url ?>/auth/login.php" class="auth-btn">Log In</a>
+            <a href="<?= $base_url ?>/auth/register.php" class="auth-btn">Register</a>
         <?php endif; ?>
     </div>
 </nav>

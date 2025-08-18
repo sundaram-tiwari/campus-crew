@@ -9,6 +9,7 @@
 <body>
 
     <?php 
+    session_start();
     include 'includes/navbar.php' 
     ?>
   <header class="header">

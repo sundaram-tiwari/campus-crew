@@ -1,61 +1,185 @@
+/* General Styling */
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fb;
   padding: 20px;
+  margin: 0;
+  color: #333;
 }
 
+/* Main Container */
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Profile Section */
 .profile-container {
+  flex: 0 0 350px;
   background: #fff;
-  padding: 20px;
-  max-width: 400px;
-  margin: auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #222;
 }
 
-.profile-container h2{
-    text-align: center;
-    color: #2f36f6;
+.profile-container h2 {
+  text-align: center;
+  color: #2f36f6;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
 input,
 select {
   width: 100%;
-  padding: 8px;
-  margin: 6px 0;
+  padding: 10px;
+  margin: 8px 0 15px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
+/* Button Group */
 .btn-group {
   display: flex;
-  gap: 10px;
   justify-content: center;
-  margin-top: 15px;
+  gap: 12px;
+  margin-top: 10px;
 }
 
-button,
-.logout-btn {
-  padding: 8px 16px;
+button {
+  padding: 10px 18px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 .update-btn {
   background: #163dff;
-  color: white;
+  color: #fff;
 }
 
 #saveBtn {
-    background: #4dd258;
+  background: #4dd258;
+  color: #fff;
 }
 
 .cancel-btn {
   background: #f44336;
-  color: white;
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.registered-events {
+  flex: 1;
+  min-width: 320px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.event-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.event-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.event-details h3 {
+  margin: 5px 0 8px;
+  font-size: 18px;
+  color: #163dff;
+}
+
+.event-details p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.registered-at {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+}
+
+/* Cancel Button */
+.event-card .cancel-btn {
+  background-color: #ff4d4d;
+  padding: 10px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.event-card .cancel-btn:hover {
+  background-color: #e60000;
+}
+
+.header-flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-flex h2{
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #222;  
+}
+
+.back-btn {
+  background: #405ffc;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-decoration: none;
+  padding: 8px 14px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #ddd;
 }

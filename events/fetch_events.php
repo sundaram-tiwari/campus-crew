@@ -25,7 +25,7 @@ if(!empty($where)){
     $sql .= " WHERE " . implode(" AND ", $where);
 }
 
-$sql .= " ORDER BY event_date DESC";
+$sql .= " ORDER BY event_date ASC";
 
 $result = mysqli_query($conn, $sql);
 
