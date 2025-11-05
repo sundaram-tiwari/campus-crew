@@ -66,7 +66,7 @@ if (isset($_SESSION['user_id'])) {
         <div class="event-action">
 
             <?php if (!isset($_SESSION['user_id'])): ?>
-                <a href="../public/events.php" class="btn btn-secondary">⬅ Go Back</a>
+                <a href="../events.php" class="btn btn-secondary">⬅ Go Back</a>
                 <a href="../auth/login.php" class="btn btn-primary">Login to Register</a>
             <?php else: ?>
                 <?php if ($is_registered): ?>
@@ -75,7 +75,7 @@ if (isset($_SESSION['user_id'])) {
                         onsubmit="return confirm('Cancel your registration?');">
                         <input type="hidden" name="reg_id" value="<?php echo $reg_id; ?>">
                         <button type="submit" class="btn btn-danger">Cancel Registration</button>
-                        <a href="../public/events.php" class="btn btn-secondary">⬅ Go Back</a>
+                        <a href="../events.php" class="btn btn-secondary">⬅ Go Back</a>
                     </form>
                 <?php else: ?>
                     <a href="register_event.php?event_id=<?php echo $event['event_id']; ?>" class="btn btn-primary">Register</a>

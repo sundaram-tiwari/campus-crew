@@ -123,5 +123,4 @@ $result = mysqli_query($conn, $sql);
         </div>
     </main>
 </body>
-
 </html>
